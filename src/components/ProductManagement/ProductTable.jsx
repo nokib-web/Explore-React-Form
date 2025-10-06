@@ -1,6 +1,19 @@
-import React from 'react';
+import React, {  } from 'react';
 
-const ProductTable = ({products}) => {
+
+
+
+
+
+
+const ProductTable = ({ products}) => {
+
+    // const [products, setProducts] = useState(initialProducts);
+
+    // const handleDelete = (index) => {
+    //     setProducts(products.filter((_, i) => i !== index));
+    // };
+
     return (
         <div>
             <h3>Products: {products.length}</h3>
@@ -15,18 +28,18 @@ const ProductTable = ({products}) => {
                     </tr>
                 </thead>
                 <tbody>
-                  {
-                    products.map((product, index) => <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{product.name}</td>
-                        <td>{product.price}</td>
-                        <td>{product.quantity}</td>
-                        <td><button>Delete</button></td>
-                    </tr>)
-                  }
+                    {
+                        products.map((product, index) => <tr key={index}>
+                            <td>{index + 1}</td>
+                            <td>{product.name}</td>
+                            <td>{product.price}</td>
+                            <td>{product.quantity}</td>
+                            <td><button >Delete</button></td>
+                        </tr>)
+                    }
                 </tbody>
             </table>
-            
+
         </div>
     );
 };

@@ -9,9 +9,17 @@ const ProductForm = ({handleAddProduct}) => {
         const quantity = event.target.quantity.value;
 
 
+
+
         if(name.length===0 || price.length===0 || quantity.length===0){
             setError('All fields are required')
             return;
+        }
+        else if (price<0){
+            setError('price can not be negative')
+        }
+        else if (quantity<0){
+            setError('quantity can not be negative')
         }
         else{
             setError('')

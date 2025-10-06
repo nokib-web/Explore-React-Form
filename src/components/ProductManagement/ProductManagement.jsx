@@ -4,11 +4,12 @@ import ProductTable from './ProductTable';
 
 const ProductManagement = () => {
 
-    const [products, setproducts]= useState([]);
+    const [products, setProducts]= useState([]);
 
     const handleAddProduct = (newProduct) => { 
         const updatedProducts = [...products, newProduct];
-        setproducts(updatedProducts);
+        setProducts(updatedProducts);
+        
     }
         
 
